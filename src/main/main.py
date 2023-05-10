@@ -24,10 +24,13 @@ def main():
         user_input_encode = input(f'Слово {i}: {morse_word}')
 
         if user_input_encode in ['stop', 'стоп']:
-            return 'Игра остановлена'
+            print(f'Вы угадали {count_true.count(True)} слов из 5')
+            return
 
         if user_input_encode == english_words_random:
             count_true.append(True)
+        else:
+            print(f'неверно, правильное слово {english_words_random}')
 
     print(f'Вы угадали {count_true.count(True)} слов из 5')
 
